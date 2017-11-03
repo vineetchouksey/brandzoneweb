@@ -1,0 +1,27 @@
+<body class="body">
+<div class="row">
+  <div class="col-sm-4">
+    <video autoplay muted loop src="assets/videos/splash.mp4" poster="assets/images/video_poster.jpg" width="100%" height="100%"></video>
+     <div class="logo-container">
+    <img src="assets/images/logo.png">
+  </div>
+  </div>
+</div>
+<div>
+<div class="col-sm-5">
+</div>
+<div class="col-sm-4">
+<form [formGroup]="login" (ngSubmit)="Login()">
+  <h1>Login Form</h1>
+<input placeholder="Username"  formControlName="username"  type="text" required="">
+<input placeholder="Password" formControlName="password" type="password" required="">
+<button>Submit</button>
+</form>
+</div>
+</div>
+<body>
+  
+
+
+
+

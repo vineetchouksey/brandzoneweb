@@ -1,0 +1,8 @@
+<md-toolbar color="primary">
+    <button *ngIf="auth.isAuthenticated" md-button (click)="goToUsers()" >Users</button>
+    <button *ngIf="auth.isAuthenticated" md-button (click)="goToProducts()" >Products</button>
+    <span style="flex: 1 1 auto"></span>
+    
+    <span style="flex-wrap: wrap"><h1>Welcome {{username}}</h1></span>
+    <button md-button (click)="auth.logout()" >Logout</button>  
+  </md-toolbar>

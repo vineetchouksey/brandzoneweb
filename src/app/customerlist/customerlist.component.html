@@ -1,0 +1,24 @@
+<div style="padding: 56px;">
+    <div style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
+        <data-table id="persons-grid" headerTitle="Users" [items]="items" [itemCount]="itemCount" (reload)="reloadItems($event)"
+            (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)" [rowTooltip]="rowTooltip">
+            <data-table-column [property]="'id'" [header]="'id'" [sortable]="true" [resizable]="false" [visible]="false">
+            </data-table-column>
+            <data-table-column [property]="'name'" [header]="'Name'" [sortable]="true" [resizable]="true">
+            </data-table-column>
+            <data-table-column [property]="'DOB'" [header]="'Date Of Birth'" [sortable]="true" [resizable]="true">
+            </data-table-column>
+            <data-table-column [property]="'gender'" [header]="'Gender'" [sortable]="true" [resizable]="true" [width]="100">
+            </data-table-column>
+            <data-table-column [property]="'email'" [header]="'Email'" [visible]="true">
+            </data-table-column>
+            <data-table-column [property]="'role'" [header]="'User Role'" [sortable]="true" [resizable]="true" [width]="130">
+            </data-table-column>
+            <data-table-column [visible]="true" [header]="'Actions'">
+                <ng-template #dataTableCell let-item="item">
+                    <button (click)="EditClicked(item)" class="btn btn-sm btn-default">Edit</button>
+                    <button (click)="DeleteClicked(item)" class="btn btn-sm btn-default">Delete</button>
+                </ng-template>
+            </data-table-column>
+        </data-table>
+    </div>
